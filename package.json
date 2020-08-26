@@ -1,6 +1,6 @@
 {
   "name": "joi-validation-builder",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Joi Validation Builder",
   "main": "dist/index.js",
   "scripts": {

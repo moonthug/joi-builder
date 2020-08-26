@@ -1,11 +1,11 @@
-# joi-builder
+# joi-validation-builder
 
-`joi-builder` is a library for constructing `joi` schemas from strings.
+`joi-validation-builder` is a library for constructing `joi` schemas from strings.
 
 ## Installation
 
 ```bash
-npm install joi-builder
+npm install joi-validation-builder
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install joi-builder
 `buildAndValidate` helper function.
 
 ```js
-const { buildAndValidate } = require('joi-builder');
+const { buildAndValidate } = require('joi-validation-builder');
 
 const schemaDescriptor = {
   firstName: 'string:min=1,max=80,required',
@@ -43,7 +43,7 @@ console.log(`Any Errors? ${result.error || 'nope'}\n\n`);
 
 `ValidationBuilder` class.
 ```js
-const { ValidationBuilder } = require('joi-builder');
+const { ValidationBuilder } = require('joi-validation-builder');
 
 const validationBuilder = new ValidationBuilder();
 const schema = validationBuilder.build(schemaDescriptor);

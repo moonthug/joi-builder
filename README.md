@@ -10,7 +10,23 @@ npm install joi-validation-builder
 
 ## Usage
 
-`buildAndValidate` helper function.
+#### `buildAndValidate` helper function
+
+```js
+buildAndValidate(schemaDescriptor, input, JoiOptions)
+```
+
+*Arguments*
+- `schemaDescriptor`
+    - An object whereby keys map to Joi schema description in the form of strings
+- `input`
+    - An object to be validated
+- `joiOptions`
+    - An object passed directly to Joi when `validate()` is called
+
+*Returns*
+
+- `joi.ValidationResult`
 
 ```js
 const { buildAndValidate } = require('joi-validation-builder');
@@ -41,7 +57,29 @@ const result = buildAndValidate(schemaDescriptor, input,  { abortEarly: false })
 console.log(`Any Errors? ${result.error || 'nope'}\n\n`);
 ```
 
-`ValidationBuilder` class.
+#### `ValidationBuilder` class
+
+##### Constructor
+
+```js
+const validationBuilder = new ValidationBuilder();
+```
+
+##### build
+
+```js
+validationBuilder.build(schemaDescriptor)
+```
+
+*Arguments*
+
+- `schemaDescriptor`
+    - An object whereby keys map to Joi schema description in the form of strings
+
+*Returns*
+
+- `joi.Schema`
+    
 ```js
 const { ValidationBuilder } = require('joi-validation-builder');
 

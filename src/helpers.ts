@@ -1,5 +1,5 @@
 import { JoiBuilder } from './JoiBuilder';
-import { Schema } from 'joi';
+import { Schema, ValidationResult } from 'joi';
 
 /**
  *
@@ -7,7 +7,7 @@ import { Schema } from 'joi';
  * @param value
  * @param joiOptions
  */
-export const buildAndValidate = (schemaDescriptor: Record<string, string>, value: any, joiOptions: any) => {
+export const buildAndValidate = (schemaDescriptor: Record<string, string>, value: any, joiOptions: any): ValidationResult => {
   return new JoiBuilder()
     .build(schemaDescriptor)
     .validate(value, joiOptions);
